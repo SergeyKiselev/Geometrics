@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Configuration2.UserControls.Network"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:c1DG="clr-namespace:C1.WPF.DataGrid;assembly=C1.WPF.DataGrid.4"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="706">
+    <Grid>
+        <Grid Name="grid1">
+            <Grid.RowDefinitions>
+                <RowDefinition Style="{StaticResource StyleToolMenuHeigh}" />
+                <RowDefinition Height="150*"/>
+            </Grid.RowDefinitions>
+            <c1DG:C1DataGrid Grid.Row="1" Name="dtGrid" Style="{StaticResource StyleDG}">
+                <c1DG:C1DataGrid.Columns>
+
+                    <c1DG:DataGridTextColumn Name="colNameNetwork" HorizontalAlignment="Left" Width="170" Binding="{Binding Path=Name, Mode=TwoWay}"
+                                              HeaderStyle="{StaticResource StyleHeaderDG}" CellStyle="{StaticResource StyleFontCell}">
+                        <c1DG:DataGridTextColumn.Header>
+                            <TextBlock TextWrapping="Wrap" Text="Идентификатор сетевого подключения"></TextBlock>
+                        </c1DG:DataGridTextColumn.Header>
+                    </c1DG:DataGridTextColumn>
+                    <c1DG:DataGridTextColumn Name="colIP" HorizontalAlignment="Center" Width="170" Binding="{Binding Path=IP, Mode=TwoWay}"
+                                             HeaderStyle="{StaticResource StyleHeaderDG}" CellStyle="{StaticResource StyleFontCell}">
+                        <c1DG:DataGridTextColumn.Header>
+                            <TextBlock TextWrapping="Wrap" Text="IP"></TextBlock>
+                        </c1DG:DataGridTextColumn.Header>
+                    </c1DG:DataGridTextColumn>
+                    <c1DG:DataGridTextColumn Name="colMask" HorizontalAlignment="Center" Width="170" Binding="{Binding Path=MASK, Mode=TwoWay}"
+                                             HeaderStyle="{StaticResource StyleHeaderDG}" CellStyle="{StaticResource StyleFontCell}">
+                        <c1DG:DataGridTextColumn.Header>
+                            <TextBlock TextWrapping="Wrap" Text="Маска подсети"></TextBlock>
+                        </c1DG:DataGridTextColumn.Header>
+                    </c1DG:DataGridTextColumn>
+
+
+                    <c1DG:DataGridTextColumn CanUserFilter="False" CanUserMove="False"
+                                             CanUserResize="False" CanUserSort="False"
+                                             IsReadOnly="True" VerticalAlignment="Center"
+                                             HeaderStyle="{StaticResource StyleHeaderDG}" CellStyle="{StaticResource StyleFontCell}">
+                    </c1DG:DataGridTextColumn>
+                </c1DG:C1DataGrid.Columns>
+            </c1DG:C1DataGrid>
+            <ToolBar Name="ToolMenu1">
+                <ToolBar.Items>
+                    <Button Name="btnAddChannel" Click="btnAddChannel_Click" Style="{StaticResource StyleTButton}">
+                        <StackPanel>
+                            <Image Name="IMG_ADD" Source="/Icon/db_add_9728.png" Style="{StaticResource StyleTImage}"/>
+                            <Label Content="Добавить сеть" Style="{StaticResource StyleTLabel}"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Label Width="5"/>
+                    <Button Name="buttonSave"  Click="buttonSave_Click" Style="{StaticResource StyleTButton}">
+                        <StackPanel>
+                            <Image Name="imgSave" Source="/Icon/filesave_5443_2.png" Style="{StaticResource StyleTImage}"/>
+                            <Label Content="Сохранить" Style="{StaticResource StyleTLabel}"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Label Width="5"/>
+                    <Button Name="buttonDelete" Click="buttonDelete_Click" Style="{StaticResource StyleTButton}">
+                        <StackPanel>
+                            <Image Source="/Icon/Svalka.png" Style="{StaticResource StyleTImage}"/>
+                            <Label Content="Удалить" Style="{StaticResource StyleTLabel}"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Label Width="5"/>
+                </ToolBar.Items>
+            </ToolBar>
+        </Grid>
+    </Grid>
+</UserControl>
+

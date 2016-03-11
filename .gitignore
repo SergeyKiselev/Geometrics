@@ -4,3 +4,5 @@ bin/Debug/Geometrics.dll
 obj/Debug/Geometrics.csproj.FileListAbsolute.txt
 *.trx
 TestResults/Sergey_Kiselev_SERGEYPC 2016-03-11 15_31_54/Out/AgentRestart.dat
+obj/Debug/Geometrics.dll
+TestProjectGeometrics/obj/Debug/TestProjectGeometrics.dll
