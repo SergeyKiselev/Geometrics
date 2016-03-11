@@ -1,0 +1,6 @@
+*.pdb
+bin/Debug/Geometrics.dll
+*.cache
+obj/Debug/Geometrics.csproj.FileListAbsolute.txt
+*.trx
+TestResults/Sergey_Kiselev_SERGEYPC 2016-03-11 15_31_54/Out/AgentRestart.dat
